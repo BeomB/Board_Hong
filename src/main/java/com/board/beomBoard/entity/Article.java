@@ -2,10 +2,7 @@ package com.board.beomBoard.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @ToString
 @Setter
@@ -16,7 +13,7 @@ import javax.persistence.Id;
 public class Article {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)     //DB가 id를 자동 생성한다.
     private Long id;
 
     @Column
