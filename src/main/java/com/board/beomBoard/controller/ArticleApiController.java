@@ -48,7 +48,7 @@ public class ArticleApiController {
             log.info("잘못된 요청! id: {}, article:{}",id,article.toString());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
-
+        target.put()
         return articleRepository.save(article);
     }
 
